@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Table</title>
+</head>
+<style>
+    body{
+        background-color: rgb(41, 39, 39);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .head{
+        background-color: #484646;
+        margin-bottom: 25px;
+        
+    }
+    .dropdown{
+        background-color: #484646;
+        color: white;
+        width: 10%;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+    }
+    
+    table{
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+    tr{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+    }
+
+    tbody tr:hover {
+      background-color: #333;
+    }
+
+    
+    th{
+        font-weight: 100;
+        text-align: left;
+    }
+    
+    .points{
+        font-weight: bold;
+    }
+    .npoints{
+        font-weight: bold;
+    }
+    .top4{
+        background-color: rgba(59, 59, 149, 0.779);
+    }
+    .europa{
+        background-color: rgba(149, 105, 59, 0.449);
+    }
+    .relegation{
+        background-color: rgba(255, 0, 0, 0.177);
+    }
+    .last5 span{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 0 2px;
+    }
+    
+    .win{
+        background-image: url(logo/win.png);
+        background-position: center;
+    }
+    .draw{
+        background-image: url(logo/draw.png);
+        background-position: center;
+    }
+    .lose{
+        background-image: url(logo/lose.png);
+        background-position: center;
+    }
+    img{
+        width: 25%;
+    }
+</style>
+<body>
+    <h3>Table</h3>
+    <div class="head">
+        <label>Season</label><br>
+        <select class="dropdown">
+            <option value="2024-25">2024-25</option>
+        </select>
+    </div>
+    <table>
+        <tr>
+            <th>Club</th>
+            <th></th>
+            <th></th>
+            <th>MP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th class="points">Pts</th>
+            <th>Last 5</th>
+        </tr>
+        <tr class="top4">
+            
+            <td>1</td>
+            <td><img src="logo/liverpool.png"></td>
+            <td>Liverpool</td>
+            <td>22</td>
+            <td>16</td>
+            <td>5</td>
+            <td>1</td>
+            <td>54</td>
+            <td>21</td>
+            <td>33</td>
+            <td class="npoints">53</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr class="top4">
+            <td>2</td>
+            <td><img src="logo/arsenal.png"></td>
+            <td>Arsenal</td>
+            <td>23</td>
+            <td>13</td>
+            <td>8</td>
+            <td>2</td>
+            <td>44</td>
+            <td>21</td>
+            <td>23</td>
+            <td class="npoints">47</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr class="top4">
+            <td>3</td>
+            <td><img src="logo/nottingham.png"></td>
+            <td>Nottm Forest</td>
+            <td>23</td>
+            <td>13</td>
+            <td>5</td>
+            <td>5</td>
+            <td>33</td>
+            <td>27</td>
+            <td>6</td>
+            <td class="npoints">44</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr class="top4">
+            <td>4</td>
+            <td><img src="logo/mancity.png"></td>
+            <td>Man city</td>
+            <td>23</td>
+            <td>12</td>
+            <td>5</td>
+            <td>6</td>
+            <td>47</td>
+            <td>30</td>
+            <td>17</td>
+            <td class="npoints">41</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr class="europa">
+            <td>5</td>
+            <td><img src="logo/newcastle.png"></td>
+            <td>Newcastle</td>
+            <td>23</td>
+            <td>12</td>
+            <td>5</td>
+            <td>6</td>
+            <td>41</td>
+            <td>27</td>
+            <td>14</td>
+            <td class="npoints">41</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><img src="logo/chelsea.png"></td>
+            <td>Chelsea</td>
+            <td>23</td>
+            <td>11</td>
+            <td>7</td>
+            <td>5</td>
+            <td>45</td>
+            <td>30</td>
+            <td>15</td>
+            <td class="npoints">40</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="draw"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><img src="logo/bournemouth.png"></td>
+            <td>Bournemouth</td>
+            <td>23</td>
+            <td>11</td>
+            <td>7</td>
+            <td>5</td>
+            <td>45</td>
+            <td>30</td>
+            <td>15</td>
+            <td class="npoints">40</td>
+            <td class="last5">
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><img src="logo/astonvilla.png"></td>
+            <td>Aston Villa</td>
+            <td>22</td>
+            <td>10</td>
+            <td>6</td>
+            <td>6</td>
+            <td>33</td>
+            <td>34</td>
+            <td>-1</td>
+            <td class="npoints">36</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><img src="logo/brighton.png"></td>
+            <td>Brighton</td>
+            <td>23</td>
+            <td>8</td>
+            <td>10</td>
+            <td>5</td>
+            <td>35</td>
+            <td>31</td>
+            <td>4</td>
+            <td class="npoints">34</td>
+            <td class="last5">
+                <span class="draw"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><img src="logo/fulham.png"></td>
+            <td>Fulham</td>
+            <td>22</td>
+            <td>8</td>
+            <td>9</td>
+            <td>5</td>
+            <td>34</td>
+            <td>30</td>
+            <td>4</td>
+            <td class="npoints">33</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="draw"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td><img src="logo/brentford.png"></td>
+            <td>Brentford</td>
+            <td>22</td>
+            <td>8</td>
+            <td>4</td>
+            <td>10</td>
+            <td>40</td>
+            <td>39</td>
+            <td>1</td>
+            <td class="npoints">28</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td><img src="logo/cpalace.png"></td>
+            <td>Crystal Palace</td>
+            <td>22</td>
+            <td>6</td>
+            <td>9</td>
+            <td>7</td>
+            <td>25</td>
+            <td>28</td>
+            <td>-3</td>
+            <td class="npoints">27</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td><img src="logo/manunited.png"></td>
+            <td>Man United</td>
+            <td>22</td>
+            <td>7</td>
+            <td>10</td>
+            <td>7</td>
+            <td>25</td>
+            <td>28</td>
+            <td>-3</td>
+            <td class="npoints">26</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td><img src="logo/westham.png"></td>
+            <td>West Ham</td>
+            <td>22</td>
+            <td>7</td>
+            <td>5</td>
+            <td>10</td>
+            <td>27</td>
+            <td>43</td>
+            <td>-16</td>
+            <td class="npoints">26</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td><img src="logo/tottenham.png"></td>
+            <td>Tottenham</td>
+            <td>22</td>
+            <td>7</td>
+            <td>3</td>
+            <td>12</td>
+            <td>45</td>
+            <td>35</td>
+            <td>10</td>
+            <td class="npoints">24</td>
+            <td class="last5">
+                <span class="draw"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td><img src="logo/everton.png"></td>
+            <td>Everton</td>
+            <td>22</td>
+            <td>5</td>
+            <td>8</td>
+            <td>9</td>
+            <td>19</td>
+            <td>28</td>
+            <td>-9</td>
+            <td class="npoints">23</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td><img src="logo/lcity.png"></td>
+            <td>Leicester City</td>
+            <td>22</td>
+            <td>3</td>
+            <td>5</td>
+            <td>14</td>
+            <td>23</td>
+            <td>48</td>
+            <td>-25</td>
+            <td class="npoints">14</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="win"></span>
+            </td>
+        </tr>
+        <tr class="relegation">
+            <td>18</td>
+            <td><img src="logo/wolves.png"></td>
+            <td>Wolves</td>
+            <td>23</td>
+            <td>4</td>
+            <td>4</td>
+            <td>15</td>
+            <td>32</td>
+            <td>52</td>
+            <td>-20</td>
+            <td class="npoints">16</td>
+            <td class="last5">
+                <span class="draw"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr class="relegation">
+            <td>19</td>
+            <td><img src="logo/ipswichtown.png"></td>
+            <td>Ipswich Town</td>
+            <td>23</td>
+            <td>3</td>
+            <td>7</td>
+            <td>13</td>
+            <td>21</td>
+            <td>47</td>
+            <td>-26</td>
+            <td class="npoints">16</td>
+            <td class="last5">
+                <span class="win"></span>
+                <span class="draw"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+        <tr class="relegation">
+            <td>20</td>
+            <td><img src="logo/southampton.png"></td>
+            <td>Southampton</td>
+            <td>23</td>
+            <td>1</td>
+            <td>3</td>
+            <td>19</td>
+            <td>16</td>
+            <td>53</td>
+            <td>-37</td>
+            <td class="npoints">6</td>
+            <td class="last5">
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+                <span class="lose"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
